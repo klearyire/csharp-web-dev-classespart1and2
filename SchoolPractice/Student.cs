@@ -96,6 +96,15 @@ namespace SchoolPractice
             Student s = toBeCompared as Student;
             return s.studentId == studentId;
         }
+
+        public override string ToString()
+        {
+            return "Here are some stats on your Student:\n"
+                + $"Name: {Name}\n"
+                + $"Id number: {studentId}\n"
+                + $"Number of credits: {NumberOfCredits}\n"
+                + $"GPA: {Gpa}";
+        }
     }
 }
 
