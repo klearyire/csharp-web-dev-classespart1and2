@@ -46,6 +46,9 @@ namespace SchoolPractice
         public void AddGrade(int courseCredits, double grade)
         {
             // update fields
+            double currentTQS = Gpa * NumberOfCredits;
+
+
         }
 
         public string GetGradeLevel (int NumberOfCredits)
