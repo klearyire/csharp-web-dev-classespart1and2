@@ -38,6 +38,28 @@ namespace SchoolPractice
             Gpa = 0.0;
         }
 
+        public override bool Equals(object toBeCompared)
+        {
+
+            if (toBeCompared == this)
+            {
+                return true;
+            }
+
+            if (toBeCompared == null)
+            {
+                return false;
+            }
+
+            if (toBeCompared.GetType() != this.GetType())
+            {
+                return false;
+            }
+
+            Student s = toBeCompared as Student;
+            return s.studentId == studentId;
+        }
+
         public string StudentInfo()
         {
             return (Name + " has a GPA of: " + Gpa);
